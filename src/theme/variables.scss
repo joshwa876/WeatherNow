@@ -1,0 +1,37 @@
+ // Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+ // http://ionicframework.com/docs/ionicons/
+ //https://ionicframework.com/docs/theming/overriding-ionic-variables/
+$font-path: "../assets/fonts";
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+$colors: (
+  primary: #488aff,
+  secondary: #32db64,
+  danger: #f53d3d,
+  light: #f4f4f4,
+  dark: #222,
+  whiteT: #ffffff,
+  greyT: #9c9c9c,
+  //custom colors
+  morning: #fff99c,
+  midDay: #ffdb00,
+  afternoon: #ffaf00,
+  evening: #ff5300,
+ night: #37367e
+);
+$time : morning;
+ //todo: change color based on time of day
+$toolbar-background: color($colors,morning);
+$tabs-background: color($colors,evening);
+$tabs-tab-color-active: color($colors, night);
+ $tabs-md-tab-text-color-active: color($colors,whiteT);
+ $tabs-md-tab-icon-color-active: color($colors,whiteT);
+
+@import "ionic.theme.default";
+@import "ionic.ionicons";
+@import "roboto";
+@import "noto-sans";
