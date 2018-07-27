@@ -13,10 +13,10 @@ export class HomePage {
   today = (this.days[new Date().getDay()]);
   month = (this.months[new Date().getMonth()]);
   dayNum = new Date().getDate();
-  private wp;
-
+  private readonly wp;
   constructor(public navCtrl: NavController, private weatherProvider:WeatherProvider) {
-    //this.wp = this.weatherProvider;
+    this.wp = this.weatherProvider.mGetWeatherData();
+    console.log(this.wp);
     console.log(this.today + ' ' + this.month + ' ' + this.dayNum);
   }
 }
