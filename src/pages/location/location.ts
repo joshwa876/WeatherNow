@@ -20,6 +20,7 @@ export class LocationPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LocationPage');
+
   }
 
 }

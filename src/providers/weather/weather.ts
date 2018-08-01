@@ -15,13 +15,16 @@ export class WeatherProvider {
 
   constructor(public http: HttpClient) {
     console.log('Hello WeatherProvider Provider');
-    //console.log(this.mGetWeatherData());
+
   }
 
   mGetWeatherData(){
-    return fetch(`http://jsonplaceholder.typicode.com/posts`)
+    return fetch(this.url+this.key)
       .then(res=>res.json())
-      .then(posts => console.log(posts));
+      .then(posts => (data)=>{
+        return data;
+      })
+      .catch(error => console.log('Error::',error));
   }
 
   /*mGetWeather(){

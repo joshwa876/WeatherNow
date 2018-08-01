@@ -15,8 +15,10 @@ export class HomePage {
   dayNum = new Date().getDate();
   private readonly wp;
   constructor(public navCtrl: NavController, private weatherProvider:WeatherProvider) {
-    this.wp = this.weatherProvider.mGetWeatherData();
-    console.log(this.wp);
+    //this.wp = this.weatherProvider.mGetWeatherData();
+    //console.log(this.wp);
     console.log(this.today + ' ' + this.month + ' ' + this.dayNum);
+    let x = weatherProvider.mGetWeatherData();
+    console.log('Weather data::',x);
   }
 }
