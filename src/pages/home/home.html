@@ -1,8 +1,22 @@
 <ion-header>
   <ion-navbar>
-    <ion-title><div id="topToolBar">{{today}} {{dayNum}} {{month}}</div></ion-title>
+    <ion-title>
+      <img class="weather-icon-home" src="http://openweathermap.org/img/w/10d.png">
+      <div id="topToolBar">{{today}} {{dayNum}} {{month}}</div>
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="home">
+  <ion-list>
+    <div class="infinity-card">
+      Hello
+    </div>
+    <div class="infinity-card">
+      Hello
+    </div>
+  </ion-list>
+  <button (click)="showAlert()">
+    warn
+  </button>
 </ion-content>
